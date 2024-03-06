@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// card structure definition            
+typedef struct card {                           
+   char *face; // define pointer face   
+   char *suit; // define pointer suit   
+}Mycard; 
+
+int main(void)
+{ 
+   Mycard YourCard,*YourCardPtr,YourCardArr[1]; // define one struct card variable   
+
+   // place strings into aCard
+   YourCard.face = "Ace";   
+   YourCard.suit = "Spades";
+   YourCardArr[0].face="Ace";
+   YourCardArr[0].suit= "Spades";
+   YourCardArr[1].face= "TWO";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "Two";
+   YourCardArr[1].suit="Heart";
+
+   YourCardPtr = &YourCard; // assign address of aCard to cardPtr
+
+   printf("%s%s%s\n%s%s%s\n%s%s%s\n%s%s%s\n%s%s%s\n", YourCard.face, " of ", YourCard.suit,
+      YourCardPtr->face, " of ", YourCardPtr->suit,                           
+      (*YourCardPtr).face, " of ", (*YourCardPtr).suit),
+	  YourCardArr[0].face," of ",YourCardArr[0].suit,
+	  YourCardArr[1].face," of ",YourCardArr[1].suit;                 
+}
