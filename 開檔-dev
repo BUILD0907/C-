@@ -26,7 +26,7 @@ int main(void)
    
       // output 100 blank records to file                              
       for ( i = 1; i <= 100; ++i) {                                   
-         fwrite(&blankClient, sizeof(struct clientData), 1, cfPtr);
+         fwrite(&blankClient, sizeof(STU), 1, cfPtr);
       }                                                      
 
       fclose (cfPtr); // fclose closes the file
