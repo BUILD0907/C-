@@ -1,0 +1,53 @@
+//題目: 利用函數多載(function overloading)建立四個同名函數volumn，分別計算出
+//1. 立方體體積(只需一個整數參數)
+//2. 球體體積(只需一個浮點數參數)
+//3. 圓柱體體積(只需兩個浮點數參數)
+//4. 長方體體積(需三個浮點數參數)
+// ***** 請使用傳位置呼叫(call by reference) 
+
+// Fig. 15.10: fig15_10.cpp
+// Overloaded functions.
+#include <iostream>
+using namespace std;
+
+// function square for int values
+void volume(int& x)
+{
+	x = x * x * x;
+}
+
+void volume(double& r)
+{
+	double x;
+	x = r * r * r;
+	x = ((double)4 / 3) * 3.14159 * x;
+}
+
+void volume(double& r, double& h)
+{
+	double x;
+	x = r * r;
+	x = 3.14159 * x * h;
+}
+void volume(double& l, double& w, double& h)
+{
+	double x;
+	x = w * l * h;
+}
+
+
+// function square for double values
+
+
+int main()
+{
+	int a=7;
+	volume(a);
+	double b = 7.5;
+	volume(b);
+	double c = 7.5, d = 8.5;
+	volume(c, d);
+	double e = 7.5, f = 8.5, g = 9.5;
+	volume(e, f, g);
+
+}
