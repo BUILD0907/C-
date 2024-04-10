@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class Square {
+public:
+    void surf() const {
+        int a, b;
+        cout << "請輸入長寬\n";
+        cin >> a >> b;
+        cout << "Surface is " <<a*b<< endl;
+    }
+};
+
+int main()
+{
+    Square mySquare;
+    mySquare.surf();
+}
