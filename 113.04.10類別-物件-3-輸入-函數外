@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Square {
+public:
+    void setCourseName(string courseName) {
+        if (courseName != "")
+            squareName = courseName;
+        else
+            cout << "Error Name!" << endl;
+    }
+    string getCourseName() const {
+        return squareName;
+    }
+    void surf(int a, int b) const {
+        cout << getCourseName() << " is " << a * b << endl;
+    }
+private:
+    string squareName;
+};
+
+int main()
+{
+    Square mySquare;
+    string nameOfCourse;
+    int a, b;
+    cout << "請輸入長寬\n";
+    cin >> a >> b;
+    cin.ignore();
+    cout << "請輸入面積名稱\n";
+    getline(cin, nameOfCourse);
+    mySquare.setCourseName(nameOfCourse);
+    mySquare.surf(a, b);
+
+    // 等待用戶輸入後結束程式
+    cout << "請按 Enter 鍵繼續...";
+    cin.get();
+
+    return 0;
+}
