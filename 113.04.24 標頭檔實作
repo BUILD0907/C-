@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include "GradeBook.h"// program uses C++ standard string class
+using namespace std;
+
+void GradeBook::setCourseName(string name)
+{
+    courseName = name; // store the course name in the object
+} // end function setCourseName
+
+// function that gets the course name
+string GradeBook::getCourseName() const
+{
+    return courseName; // return the object's courseName
+} // end function getCourseName
+
+// function that displays a welcome message
+void GradeBook::displayMessage() const
+{
+    // this statement calls getCourseName to get the 
+    // name of the course this GradeBook represents
+    cout << "Welcome to the grade book for\n" << getCourseName() << "!"
+        << endl;
+}
